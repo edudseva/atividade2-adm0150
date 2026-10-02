@@ -87,4 +87,24 @@
       all.textContent = open ? 'Fechar todos' : 'Abrir todos';
     });
   }
+  // Celular: rótulos nas células para as tabelas virarem cartões
+  document.querySelectorAll('.table-wrap').forEach(function (w) {
+    var t = w.querySelector('table');
+    if (!t || !t.tHead || !t.tHead.rows.length) return;
+    var heads = Array.prototype.map.call(t.tHead.rows[0].cells, function (c) { return c.textContent.trim(); });
+    if (heads.length < 2) return;
+    Array.prototype.forEach.call(t.tBodies, function (b) {
+      Array.prototype.forEach.call(b.rows, function (r) {
+        Array.prototype.forEach.call(r.cells, function (c, i) { if (heads[i]) c.setAttribute('data-label', heads[i]); });
+      });
+    });
+    w.classList.add('stack');
+  });
+
+  // Celular: deixa a seção atual visível no menu que rola de lado
+  var cur = document.querySelector('.nav a[aria-current="page"]');
+  var nav = document.querySelector('.nav');
+  if (cur && nav && nav.scrollWidth > nav.clientWidth) {
+    nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
+  }
 })();
