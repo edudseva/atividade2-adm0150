@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. O prompt-mestre · Cadeia de IAs · ADM0150</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="Estudo de caso da Atividade 2 de ADM0150 (UnB): prompt de detecção de oportunidades aplicado em três IAs, síntese por uma quarta IA e auditoria da cadeia.">
+<meta name="theme-color" content="#0b5c4a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b5c4a'/%3E%3Ccircle cx='9' cy='11' r='3' fill='%23fff'/%3E%3Ccircle cx='9' cy='21' r='3' fill='%23fff'/%3E%3Ccircle cx='23' cy='16' r='4' fill='%23fff'/%3E%3Cpath d='M12 11l7 4M12 21l7-4' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="index.html">Detecção de oportunidades com cadeia de IAs</a>
+    <span class="who">Eduardo Vieira Andrade · 202066473 · ADM0150 · 2026.2</span>
+    <button class="theme-toggle" type="button" aria-label="Mudar tema">☾</button>
+  </div>
+  <nav class="wrap nav" aria-label="Seções"><a href="index.html">1. Abertura</a><a href="prompt.html" aria-current="page">2. O prompt-mestre</a><a href="protocolo.html">3. Protocolo de teste</a><a href="auditoria.html">4. A síntese auditada</a><a href="conclusao.html">5. Conclusão</a><a href="anexos.html">Anexos</a></nav>
+</header>
+<main class="wrap" id="conteudo">
+<h1>2. O prompt-mestre</h1>
+<p class="lead">O prompt carrega a régua pronta: diz o que conta como oportunidade, que evidência exigir, em que estrutura responder e o que rejeitar.</p>
+
+<h2>Decisões visíveis do prompt</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Decisão</th><th>O que escolhi</th></tr></thead>
+<tbody>
+<tr><td>Recorte</td><td>Serviços (para empresas, órgãos públicos ou consumidores) no DF e RIDE; microempresa com até 2 colaboradores; capital até R$ 100 mil com giro; início entre 2027 e 2028; MVP em até 6 meses (bloco 3).</td></tr>
+<tr><td>Critério de corte</td><td>Checklist final de Dornelas: qualquer "não" ou "não sei" elimina, e a candidata eliminada aparece na resposta com o motivo (bloco 5).</td></tr>
+<tr><td>Padrão de evidência</td><td>Fontes oficiais em ordem de preferência; todo número com fonte, ano, link e o que mede; marcação FATO, INFERÊNCIA, HIPÓTESE; "NÃO FOI POSSÍVEL VERIFICAR" quando faltar dado (bloco 10).</td></tr>
+<tr><td>Formato de saída</td><td>Seções numeradas de 0 a 5 e campos fixos 2.1 a 2.11 para cada oportunidade (bloco 11).</td></tr>
+<tr><td>Quantidade</td><td>Exatamente 3 aprovadas, depois de gerar pelo menos 8 candidatas (blocos 3 e 5).</td></tr>
+</tbody></table></div>
+
+<h2>O prompt na íntegra, bloco a bloco</h2>
+<p>O texto da coluna da esquerda, lido em sequência, é exatamente o que colei nas três ferramentas, sem alteração. À direita, a justificativa de cada bloco e o que aconteceu de fato nas respostas.</p>
+<article class="block">
+<div class="block-text"><div class="block-head">[1. PAPEL E DATA]</div><pre>Atue como analista de oportunidades de negócio com experiência no mercado brasileiro e domínio do método de avaliação de José Dornelas (Empreendedorismo: transformando ideias em negócios, capítulos 3 e 4). Data de referência desta análise: outubro de 2026. Se você tiver acesso à web, use-o; se não tiver, declare isso no início da resposta.</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Aula 5 (método de Dornelas) e Etapa 3 do enunciado</p>
+<p class="lbl">Efeito esperado</p><p>Ancorar a análise no método da disciplina e fixar a data de referência. Como os modelos têm data de corte e o recorte é 2026 a 2030, pedi que a IA declarasse logo no início se tinha acesso à web.</p>
+<p class="lbl">O que aconteceu</p><p>As três declararam acesso à web. O Gemini declarou &quot;sim&quot; sem ter acesso e só admitiu depois, numa pergunta minha fora da resposta registrada. A instrução de declarar não garante que a declaração seja verdadeira.</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[2. QUEM É O FUNDADOR]</div><pre>Você está assessorando um fundador individual, morador de Brasília, com este perfil: graduando em Administração na UnB; quatro anos na Administração Pública federal em logística, suprimentos, licitações e contratos; experiência como gerente operacional de restaurante; conhecimento básico de HTML, CSS e uso cotidiano de ferramentas de IA. Prefira oportunidades em que essa experiência seja uma vantagem real.</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Aula 5: experiência no ramo e critério &quot;equipe&quot; de Timmons; Aula 4: quarta pergunta de triagem</p>
+<p class="lbl">Efeito esperado</p><p>Dornelas trata como erro frequente a ideia brilhante num mercado que o empreendedor não conhece. Por isso defini, como parâmetro do exercício, um perfil de fundador (formação, áreas de experiência, nível técnico). Sem um fundador concreto, a pergunta &quot;por que este fundador&quot; fica sem resposta possível.</p>
+<p class="lbl">O que aconteceu</p><p>Funcionou: as três puxaram oportunidades para compras públicas e restaurantes, as duas áreas do perfil definido. O efeito colateral foi um viés de confirmação, já que as IAs tenderam a elogiar a aderência do perfil.</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[3. RECORTE]</div><pre>Objetivo: detectar e qualificar EXATAMENTE 3 oportunidades de negócio para começar a operar entre 2027 e 2028, avaliadas no horizonte 2026 a 2030.
+Região: Distrito Federal e municípios da RIDE DF.
+Setor: serviços (para empresas, para órgãos públicos ou para consumidores finais). Exclua indústria, produção agropecuária e construção de infraestrutura.
+Porte: microempresa, com o fundador e no máximo 2 colaboradores no primeiro ano.
+Capital: até R$ 100.000,00, incluindo capital de giro.
+Teste: o MVP precisa ser executável em até 6 meses.</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Etapa 2 do enunciado (recorte); Aula 4: &quot;a diferença está dentro dos setores&quot; e o Estado como cliente em Brasília; Aula 5: capital baixo a moderado</p>
+<p class="lbl">Efeito esperado</p><p>Fechar região, setor, porte, capital e prazo de MVP para evitar lugar comum. Pedir exatamente 3 oportunidades força a seleção, em vez de uma lista longa e genérica.</p>
+<p class="lbl">O que aconteceu</p><p>O recorte foi respeitado nas três respostas. Os valores de investimento ficaram todos bem abaixo do teto de R$ 100 mil (de R$ 18 mil a R$ 65 mil, contando capital de giro).</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[4. TENDÊNCIA NÃO É OPORTUNIDADE]</div><pre>Use estas definições. TENDÊNCIA: direção observável do mercado, sem dono, sem preço e sem cliente. OPORTUNIDADE: problema concreto de alguém identificável, que essa pessoa quer resolver a ponto de pagar, e que o fundador consegue resolver melhor do que quem já tenta. Para cada oportunidade, informe separadamente a tendência de origem e a oportunidade. O cliente deve ser nomeável: &quot;gestores de compras de autarquias federais no DF&quot; é aceitável; &quot;o governo&quot;, &quot;as empresas&quot; ou &quot;os idosos&quot; não são.</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Aula 4: distinção entre tendência e oportunidade</p>
+<p class="lbl">Efeito esperado</p><p>Separar em campos diferentes a tendência e a oportunidade, e exigir cliente nomeável, com exemplo do que é aceito e do que não é.</p>
+<p class="lbl">O que aconteceu</p><p>Funcionou melhor que na Atividade 1: nenhuma das três entregou &quot;digitalização&quot; ou &quot;envelhecimento&quot; como oportunidade. Os clientes vieram com recorte (MEs fornecedoras do GDF, restaurantes do Plano Piloto).</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[5. GERAR E CORTAR]</div><pre>Antes de chegar às 3, gere pelo menos 8 candidatas e submeta todas ao CHECKLIST DE CORTE abaixo. Qualquer resposta &quot;não&quot; ou &quot;não sei&quot; elimina a candidata. As eliminadas devem aparecer na resposta, com a pergunta em que falharam.
+CHECKLIST DE CORTE:
+(a) Existe um problema a ser resolvido?
+(b) Existe um produto ou serviço que solucionará esse problema?
+(c) É possível identificar com clareza os potenciais clientes?
+(d) É possível implantar uma estratégia de marketing e vendas exequível, em custo e retorno?
+(e) A janela da oportunidade está aberta?</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Aula 5: checklist final de Dornelas e &quot;gerar muitas ideias, descartar sem constrangimento&quot;</p>
+<p class="lbl">Efeito esperado</p><p>Usar o checklist como filtro de corte: &quot;não&quot; ou &quot;não sei&quot; elimina a candidata. Pedi que os descartes aparecessem na resposta para tornar visível o que a IA rejeitou, e não só o que aprovou.</p>
+<p class="lbl">O que aconteceu</p><p>Foi o bloco mais útil para a auditoria. O Manus descartou uma ideia (estoque para restaurantes) que ChatGPT e Gemini aprovaram, e isso revelou uma divergência real. O ChatGPT listou uma oportunidade aprovada dentro da tabela de descartadas.</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[6. CINCO PERGUNTAS DE TRIAGEM]</div><pre>Cada uma das 3 oportunidades aprovadas deve responder, uma a uma:
+P1. Quem exatamente tem esse problema?
+P2. Quanto dói? (em dinheiro, tempo ou risco, quantificado quando houver dado)
+P3. Quem paga, e com que dinheiro? (em serviço público, saúde e educação, quem usa raramente é quem paga; indique o orçamento ou a rubrica de onde sai o pagamento)
+P4. Por que este fundador, e não o incumbente? (se um concorrente estabelecido puder copiar em três meses, diga isso)
+P5. Por que agora, e não em 2020 ou 2035? (indique a mudança recente, regulatória, demográfica, tecnológica ou de mercado, que abriu a janela)</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Aula 4: cinco perguntas de triagem</p>
+<p class="lbl">Efeito esperado</p><p>Obrigar cada oportunidade a responder às cinco perguntas, uma a uma, e não apenas ser descrita. A P3 pede a rubrica de onde sai o dinheiro, porque em serviço público quem usa raramente é quem paga.</p>
+<p class="lbl">O que aconteceu</p><p>As três responderam às cinco. A P2 (quanto dói) foi onde mais apareceram números sem fonte, principalmente no Gemini.</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[7. OS 3Ms]</div><pre>Para cada oportunidade:
+M1 Demanda de mercado: audiência alvo; durabilidade da necessidade; acessibilidade dos clientes pelos canais; se o custo de captação se recupera em menos de um ano.
+M2 Tamanho e estrutura: se o mercado cresce, é emergente ou fragmentado; barreiras de entrada e custos de saída; número de competidores chave; estágio do ciclo de vida.
+M3 Análise de margem: forças do negócio; margem bruta possível; ponto de equilíbrio e retorno; cadeia de valor até o cliente final.</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Aula 5: os 3Ms</p>
+<p class="lbl">Efeito esperado</p><p>Estruturar a análise econômica em demanda, tamanho e estrutura, e margem, com as perguntas do roteiro do capítulo, para tornar as respostas comparáveis campo a campo.</p>
+<p class="lbl">O que aconteceu</p><p>As três seguiram a estrutura. O M2 (tamanho do mercado no DF) ficou quase sempre como &quot;não foi possível verificar&quot;, o que é honesto e mostra a falta de dado local.</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[8. CRITÉRIOS DE ALTO E BAIXO POTENCIAL]</div><pre>Classifique cada oportunidade como alto ou baixo potencial nestes critérios de lógica: necessidades dos clientes; estrutura do mercado (consolidado ou não); barreiras de entrada; capital inicial; adequação da equipe. NÃO use os patamares numéricos de capital de risco (crescimento de 30% a 50% ao ano, vendas de dezenas de milhões) como critério de aprovação: eles não se aplicam a uma microempresa de serviços.</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Aula 5: critérios de alto e baixo potencial, só os de lógica</p>
+<p class="lbl">Efeito esperado</p><p>Usar os critérios de lógica e proibir explicitamente os patamares numéricos de capital de risco, que reprovariam qualquer microempresa de serviços.</p>
+<p class="lbl">O que aconteceu</p><p>Nenhuma IA usou os patamares de 30% a 50% ao ano. Mas as classificações divergiram muito: para a mesma oportunidade, barreira de entrada foi ALTO no ChatGPT e BAIXO no Manus.</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[9. MODELO DE NEGÓCIO]</div><pre>Para cada oportunidade, responda: QUEM PAGA, POR QUÊ e A QUE CUSTO. Apresente: preço ou forma de cobrança; investimento inicial discriminado por item; custo mensal estimado; ponto de equilíbrio estimado. Toda estimativa deve vir com as premissas usadas no cálculo. Enquadre a oportunidade em um dos cinco modelos de negócio na web de Dornelas (intermediação de negócios; comercialização de propaganda; mercado virtual; empresarial; redes sociais) ou justifique por que não se enquadra em nenhum.
+É PROIBIDO justificar potencial com métricas de atenção (audiência, seguidores, visualizações, downloads, usuários cadastrados). Só valem métricas de negócio: receita, custo, margem, clientes pagantes, renovação.</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Aula 6: definição de modelo de negócio, os cinco modelos da web e métrica de atenção x métrica de negócio</p>
+<p class="lbl">Efeito esperado</p><p>Obrigar a resposta a dizer quem paga, por quê e a que custo, com premissas; pedir o enquadramento nos cinco modelos ou a justificativa de não enquadramento; proibir audiência, seguidores e downloads como prova de potencial.</p>
+<p class="lbl">O que aconteceu</p><p>Nenhuma usou métrica de atenção. Todas as nove oportunidades foram enquadradas como &quot;Empresarial&quot;. A convergência total sugere que o recorte (serviço B2B, microempresa) praticamente determinou a resposta.</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[10. PADRÃO DE EVIDÊNCIA]</div><pre>Fontes aceitas, em ordem de preferência: IBGE, Banco Central, CODEPLAN/IPEDF, ministérios, Portal Nacional de Contratações Públicas, agências reguladoras, Sebrae, legislação, associações setoriais. Não aceitas como fonte: blogs sem autoria, conteúdo patrocinado e respostas de outras IAs.
+Todo número deve vir com: (i) fonte, (ii) ano do dado, (iii) link, (iv) o que exatamente está sendo medido (volume ou valor nominal; investimento anunciado ou contratado; Brasil ou DF).
+Marque cada afirmação relevante como [FATO] (sustentado por fonte citada), [INFERÊNCIA] (deduzida de fatos citados) ou [HIPÓTESE] (precisa ser testada no MVP).
+Quando não houver dado confiável, escreva &quot;NÃO FOI POSSÍVEL VERIFICAR&quot; e diga qual dado resolveria. Não invente números, fontes, títulos ou links. É preferível uma lacuna declarada a um número sem origem.</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Aula 4: leitura crítica de dado de mercado (&quot;todo número tem um denominador&quot;); lição da Atividade 1</p>
+<p class="lbl">Efeito esperado</p><p>Exigir fonte, ano, link e o que está sendo medido para todo número; marcar FATO, INFERÊNCIA e HIPÓTESE; preferir lacuna declarada a número sem origem.</p>
+<p class="lbl">O que aconteceu</p><p>ChatGPT e Manus cumpriram bem, com muitos &quot;não foi possível verificar&quot;. O Gemini marcou como [FATO] valores sem fonte e citou o Decreto 12.807 com o link da Lei 14.133. A regra não impede que a ferramenta rotule mal.</p>
+</aside></article><article class="block">
+<div class="block-text"><div class="block-head">[11. FORMATO OBRIGATÓRIO DA RESPOSTA]</div><pre>Use exatamente estas seções e numeração, sem introdução:
+0. Condições: acesso à web nesta resposta (sim/não) e data de corte do seu conhecimento.
+1. Candidatas descartadas: tabela com ideia, pergunta do checklist em que falhou, motivo em uma linha.
+2. Oportunidades aprovadas. Para cada uma, os campos 2.1 a 2.11:
+ 2.1 Nome
+ 2.2 Tendência de origem
+ 2.3 Cliente nomeável e problema
+ 2.4 Cinco perguntas de triagem (P1 a P5)
+ 2.5 Checklist de corte (a a e, com justificativa)
+ 2.6 3Ms (M1, M2, M3)
+ 2.7 Critérios de alto e baixo potencial
+ 2.8 Modelo de negócio: quem paga, por quê, a que custo, com premissas
+ 2.9 Enquadramento nos cinco modelos da web
+ 2.10 O que pode não acontecer (dependência de política pública, de juros, de anúncio que ainda não é contrato)
+ 2.11 Teste de MVP em 6 meses, com a métrica de negócio que confirma ou derruba a oportunidade
+3. Tabela comparativa com as colunas: oportunidade; cliente; quem paga; modelo web; investimento inicial; ponto de equilíbrio estimado; principal risco; principal evidência [FATO].
+4. Ranking das 3 e escolha de uma, em até 200 palavras.
+5. Referências: instituição ou autor, título, ano, link, data de acesso e qual dado foi retirado dela.
+Responda em português do Brasil.</pre></div>
+<aside class="block-why">
+<p class="lbl">Instrumento de aula</p><p>Etapa 2 do enunciado (formato de saída em campos fixos)</p>
+<p class="lbl">Efeito esperado</p><p>Campos numerados e fixos para que as três respostas fossem comparáveis e a síntese da Etapa 4 fosse possível.</p>
+<p class="lbl">O que aconteceu</p><p>Funcionou: as três seguiram a numeração 0 a 5 e os campos 2.1 a 2.11, o que permitiu montar as tabelas de comparação da síntese.</p>
+</aside></article>
+<details class="raw"><summary>Ver o prompt como texto corrido, para copiar</summary><pre>[1. PAPEL E DATA]
+Atue como analista de oportunidades de negócio com experiência no mercado brasileiro e domínio do método de avaliação de José Dornelas (Empreendedorismo: transformando ideias em negócios, capítulos 3 e 4). Data de referência desta análise: outubro de 2026. Se você tiver acesso à web, use-o; se não tiver, declare isso no início da resposta.
+
+[2. QUEM É O FUNDADOR]
+Você está assessorando um fundador individual, morador de Brasília, com este perfil: graduando em Administração na UnB; quatro anos na Administração Pública federal em logística, suprimentos, licitações e contratos; experiência como gerente operacional de restaurante; conhecimento básico de HTML, CSS e uso cotidiano de ferramentas de IA. Prefira oportunidades em que essa experiência seja uma vantagem real.
+
+[3. RECORTE]
+Objetivo: detectar e qualificar EXATAMENTE 3 oportunidades de negócio para começar a operar entre 2027 e 2028, avaliadas no horizonte 2026 a 2030.
+Região: Distrito Federal e municípios da RIDE DF.
+Setor: serviços (para empresas, para órgãos públicos ou para consumidores finais). Exclua indústria, produção agropecuária e construção de infraestrutura.
+Porte: microempresa, com o fundador e no máximo 2 colaboradores no primeiro ano.
+Capital: até R$ 100.000,00, incluindo capital de giro.
+Teste: o MVP precisa ser executável em até 6 meses.
+
+[4. TENDÊNCIA NÃO É OPORTUNIDADE]
+Use estas definições. TENDÊNCIA: direção observável do mercado, sem dono, sem preço e sem cliente. OPORTUNIDADE: problema concreto de alguém identificável, que essa pessoa quer resolver a ponto de pagar, e que o fundador consegue resolver melhor do que quem já tenta. Para cada oportunidade, informe separadamente a tendência de origem e a oportunidade. O cliente deve ser nomeável: &quot;gestores de compras de autarquias federais no DF&quot; é aceitável; &quot;o governo&quot;, &quot;as empresas&quot; ou &quot;os idosos&quot; não são.
+
+[5. GERAR E CORTAR]
+Antes de chegar às 3, gere pelo menos 8 candidatas e submeta todas ao CHECKLIST DE CORTE abaixo. Qualquer resposta &quot;não&quot; ou &quot;não sei&quot; elimina a candidata. As eliminadas devem aparecer na resposta, com a pergunta em que falharam.
+CHECKLIST DE CORTE:
+(a) Existe um problema a ser resolvido?
+(b) Existe um produto ou serviço que solucionará esse problema?
+(c) É possível identificar com clareza os potenciais clientes?
+(d) É possível implantar uma estratégia de marketing e vendas exequível, em custo e retorno?
+(e) A janela da oportunidade está aberta?
+
+[6. CINCO PERGUNTAS DE TRIAGEM]
+Cada uma das 3 oportunidades aprovadas deve responder, uma a uma:
+P1. Quem exatamente tem esse problema?
+P2. Quanto dói? (em dinheiro, tempo ou risco, quantificado quando houver dado)
+P3. Quem paga, e com que dinheiro? (em serviço público, saúde e educação, quem usa raramente é quem paga; indique o orçamento ou a rubrica de onde sai o pagamento)
+P4. Por que este fundador, e não o incumbente? (se um concorrente estabelecido puder copiar em três meses, diga isso)
+P5. Por que agora, e não em 2020 ou 2035? (indique a mudança recente, regulatória, demográfica, tecnológica ou de mercado, que abriu a janela)
+
+[7. OS 3Ms]
+Para cada oportunidade:
+M1 Demanda de mercado: audiência alvo; durabilidade da necessidade; acessibilidade dos clientes pelos canais; se o custo de captação se recupera em menos de um ano.
+M2 Tamanho e estrutura: se o mercado cresce, é emergente ou fragmentado; barreiras de entrada e custos de saída; número de competidores chave; estágio do ciclo de vida.
+M3 Análise de margem: forças do negócio; margem bruta possível; ponto de equilíbrio e retorno; cadeia de valor até o cliente final.
+
+[8. CRITÉRIOS DE ALTO E BAIXO POTENCIAL]
+Classifique cada oportunidade como alto ou baixo potencial nestes critérios de lógica: necessidades dos clientes; estrutura do mercado (consolidado ou não); barreiras de entrada; capital inicial; adequação da equipe. NÃO use os patamares numéricos de capital de risco (crescimento de 30% a 50% ao ano, vendas de dezenas de milhões) como critério de aprovação: eles não se aplicam a uma microempresa de serviços.
+
+[9. MODELO DE NEGÓCIO]
+Para cada oportunidade, responda: QUEM PAGA, POR QUÊ e A QUE CUSTO. Apresente: preço ou forma de cobrança; investimento inicial discriminado por item; custo mensal estimado; ponto de equilíbrio estimado. Toda estimativa deve vir com as premissas usadas no cálculo. Enquadre a oportunidade em um dos cinco modelos de negócio na web de Dornelas (intermediação de negócios; comercialização de propaganda; mercado virtual; empresarial; redes sociais) ou justifique por que não se enquadra em nenhum.
+É PROIBIDO justificar potencial com métricas de atenção (audiência, seguidores, visualizações, downloads, usuários cadastrados). Só valem métricas de negócio: receita, custo, margem, clientes pagantes, renovação.
+
+[10. PADRÃO DE EVIDÊNCIA]
+Fontes aceitas, em ordem de preferência: IBGE, Banco Central, CODEPLAN/IPEDF, ministérios, Portal Nacional de Contratações Públicas, agências reguladoras, Sebrae, legislação, associações setoriais. Não aceitas como fonte: blogs sem autoria, conteúdo patrocinado e respostas de outras IAs.
+Todo número deve vir com: (i) fonte, (ii) ano do dado, (iii) link, (iv) o que exatamente está sendo medido (volume ou valor nominal; investimento anunciado ou contratado; Brasil ou DF).
+Marque cada afirmação relevante como [FATO] (sustentado por fonte citada), [INFERÊNCIA] (deduzida de fatos citados) ou [HIPÓTESE] (precisa ser testada no MVP).
+Quando não houver dado confiável, escreva &quot;NÃO FOI POSSÍVEL VERIFICAR&quot; e diga qual dado resolveria. Não invente números, fontes, títulos ou links. É preferível uma lacuna declarada a um número sem origem.
+
+[11. FORMATO OBRIGATÓRIO DA RESPOSTA]
+Use exatamente estas seções e numeração, sem introdução:
+0. Condições: acesso à web nesta resposta (sim/não) e data de corte do seu conhecimento.
+1. Candidatas descartadas: tabela com ideia, pergunta do checklist em que falhou, motivo em uma linha.
+2. Oportunidades aprovadas. Para cada uma, os campos 2.1 a 2.11:
+ 2.1 Nome
+ 2.2 Tendência de origem
+ 2.3 Cliente nomeável e problema
+ 2.4 Cinco perguntas de triagem (P1 a P5)
+ 2.5 Checklist de corte (a a e, com justificativa)
+ 2.6 3Ms (M1, M2, M3)
+ 2.7 Critérios de alto e baixo potencial
+ 2.8 Modelo de negócio: quem paga, por quê, a que custo, com premissas
+ 2.9 Enquadramento nos cinco modelos da web
+ 2.10 O que pode não acontecer (dependência de política pública, de juros, de anúncio que ainda não é contrato)
+ 2.11 Teste de MVP em 6 meses, com a métrica de negócio que confirma ou derruba a oportunidade
+3. Tabela comparativa com as colunas: oportunidade; cliente; quem paga; modelo web; investimento inicial; ponto de equilíbrio estimado; principal risco; principal evidência [FATO].
+4. Ranking das 3 e escolha de uma, em até 200 palavras.
+5. Referências: instituição ou autor, título, ano, link, data de acesso e qual dado foi retirado dela.
+Responda em português do Brasil.</pre></details>
+
+<div class="pager"><a href="index.html">← 1. Abertura</a><a href="protocolo.html">3. Protocolo de teste →</a></div>
+</main>
+<button class="to-top" type="button" aria-label="Voltar ao topo">↑</button>
+<footer class="wrap foot">Universidade de Brasília · FACE · Departamento de Administração · ADM0150 Criação de Negócios · Profa. Marina Figueiredo Moreira · 2026.2</footer>
+</body>
+</html>

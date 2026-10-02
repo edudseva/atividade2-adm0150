@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. Protocolo de teste · Cadeia de IAs · ADM0150</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="Estudo de caso da Atividade 2 de ADM0150 (UnB): prompt de detecção de oportunidades aplicado em três IAs, síntese por uma quarta IA e auditoria da cadeia.">
+<meta name="theme-color" content="#0b5c4a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b5c4a'/%3E%3Ccircle cx='9' cy='11' r='3' fill='%23fff'/%3E%3Ccircle cx='9' cy='21' r='3' fill='%23fff'/%3E%3Ccircle cx='23' cy='16' r='4' fill='%23fff'/%3E%3Cpath d='M12 11l7 4M12 21l7-4' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="index.html">Detecção de oportunidades com cadeia de IAs</a>
+    <span class="who">Eduardo Vieira Andrade · 202066473 · ADM0150 · 2026.2</span>
+    <button class="theme-toggle" type="button" aria-label="Mudar tema">☾</button>
+  </div>
+  <nav class="wrap nav" aria-label="Seções"><a href="index.html">1. Abertura</a><a href="prompt.html">2. O prompt-mestre</a><a href="protocolo.html" aria-current="page">3. Protocolo de teste</a><a href="auditoria.html">4. A síntese auditada</a><a href="conclusao.html">5. Conclusão</a><a href="anexos.html">Anexos</a></nav>
+</header>
+<main class="wrap" id="conteudo">
+<h1>3. Protocolo de teste</h1>
+<p class="lead">Mesmo prompt, três ferramentas, primeira resposta de cada uma. Depois, uma quarta ferramenta só para sintetizar.</p>
+
+<h2>Ferramentas, versões e condições de uso</h2>
+<p>O mesmo prompt foi colado sem nenhuma alteração nas três ferramentas, em conversa nova, e registrei apenas a primeira resposta de cada uma.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>R1 ChatGPT</th>
+<th>R2 Gemini</th>
+<th>R3 Manus</th>
+<th>Síntese: Claude</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modelo visível</td>
+<td>GPT-5.6 Luna</td>
+<td>Gemini 3.6 Raciocínio</td>
+<td>Não exposto pela ferramenta</td>
+<td>claude-opus-5-5 (Cowork)</td>
+</tr>
+<tr class="even">
+<td>Data e hora (início)</td>
+<td>02/10/2026, 08:18 (-03)</td>
+<td>02/10/2026, 08:14 (-03)</td>
+<td>02/10/2026, 08:13:49 (-03); conclusão 09:05:28</td>
+<td>02/10/2026, 09:10 (-03)</td>
+</tr>
+<tr class="odd">
+<td>Busca na web</td>
+<td>Sim</td>
+<td>Não (sem acesso à web; a resposta declarou "sim", mas a ferramenta admitiu depois que usou apenas conhecimento interno)</td>
+<td>Sim</td>
+<td>Não (proibida pelo prompt de síntese)</td>
+</tr>
+<tr class="even">
+<td>Modo de raciocínio</td>
+<td>Ligado (Pensar)</td>
+<td>Ligado (Raciocínio)</td>
+<td>Agente com subagentes</td>
+<td>Não se aplica</td>
+</tr>
+<tr class="odd">
+<td>Conversa nova, sem histórico</td>
+<td>Sim</td>
+<td>Sim</td>
+<td>Sim (tarefa nova)</td>
+<td>Mesma conversa em que os prompts foram redigidos</td>
+</tr>
+<tr class="even">
+<td>Observações</td>
+<td>Links com marcação utm_source=chatgpt.com</td>
+<td>Ver confissão registrada nos anexos</td>
+<td>Entregou arquivo .md; prompt tratado como arquivo local</td>
+<td>Ferramenta diferente das três geradoras</td>
+</tr>
+</tbody>
+</table></div>
+
+
+<div class="callout">
+<p class="lbl">Registro sobre o Gemini</p>
+<p>A resposta do Gemini declarou "acesso à web: sim" no item 0. Numa pergunta posterior, feita fora da resposta registrada e sem refinar o prompt, a ferramenta afirmou:</p>
+<blockquote>"Toda a análise de negócios, as estimativas e a estrutura do plano foram elaboradas com base no meu conhecimento interno e capacidade de raciocínio lógico. O rótulo 'acesso à web: sim' no item 0 foi mantido apenas para preencher o formato exato que você havia exigido no seu cabeçalho."</blockquote>
+<p>Por isso, registro o Gemini como <strong>sem acesso à web</strong>. Esse dado explica boa parte das divergências: foi a resposta com mais números marcados como [FATO] sem fonte verificável.</p>
+</div>
+
+<h2>A quarta IA e o prompt de síntese</h2>
+<p>A síntese foi feita pelo Claude (Cowork, modelo configurado claude-opus-5-5), ferramenta diferente das três geradoras, sem busca na web, em 02/10/2026 às 09:10. Escrevi o prompt de síntese <strong>antes</strong> de ver as respostas, para que ele não fosse moldado por elas.</p>
+<p class="note">Limitação declarada: a síntese rodou na mesma conversa em que os prompts foram redigidos, e não numa sessão limpa. Na <a href="conclusao.html">conclusão</a> registro que faria isso de outro jeito.</p>
+<pre class="prompt">Você vai receber três respostas, produzidas por três IAs diferentes a partir do mesmo prompt de detecção de oportunidades de negócio no Distrito Federal. Elas estão identificadas como R1 (ChatGPT), R2 (Gemini) e R3 (Manus). Sua única tarefa é SINTETIZÁ-LAS em um panorama único. Você não é analista nesta tarefa: é um relator.
+
+REGRAS
+1. Não acrescente nenhuma informação, número, fonte, exemplo ou oportunidade que não esteja em pelo menos uma das três respostas. Não use busca na web nem conhecimento próprio.
+2. Não corrija dados, mesmo que pareçam errados. Se notar inconsistência (números que não batem, fonte que não sustenta o que diz), mantenha o dado original e acrescente [ALERTA: motivo].
+3. Toda afirmação da síntese deve terminar com a etiqueta de origem: [R1], [R2], [R3] ou combinações como [R1, R3].
+4. Preserve o grau de certeza original. O que a resposta marcou como [HIPÓTESE] ou &quot;NÃO FOI POSSÍVEL VERIFICAR&quot; continua assim. Não transforme &quot;pode&quot; em &quot;vai&quot;.
+5. Reproduza números exatamente como aparecem, junto com a fonte que a resposta atribuiu a eles.
+6. Divergência não se resolve escolhendo um lado. Quando as respostas discordarem, apresente cada versão com sua origem.
+7. Itens que aparecem em apenas uma resposta não podem ser omitidos por serem minoritários.
+8. Ao agrupar oportunidades de respostas diferentes como &quot;a mesma&quot;, explique o critério do agrupamento. Na dúvida, mantenha separadas.
+
+FORMATO
+1. Mapa das oportunidades: tabela com cada oportunidade e as colunas R1, R2, R3 (aparece / não aparece / aparece como descartada).
+2. Convergências: o que duas ou três respostas afirmam em comum.
+3. Divergências: onde discordam (oportunidade escolhida, cliente, quem paga, valores, modelo web, riscos), com cada versão e sua origem.
+4. Presentes em apenas uma resposta.
+5. Candidatas descartadas por cada resposta e o motivo.
+6. Panorama consolidado: para cada oportunidade, cliente, problema, quem paga, modelo web, investimento, ponto de equilíbrio, riscos e MVP, sempre com etiqueta de origem.
+7. Fontes citadas, agrupadas pela resposta que as citou.
+8. Limites desta síntese: o que você não conseguiu conciliar ou classificar.
+Responda em português do Brasil.</pre>
+
+<h3>Por que cada exigência</h3>
+<div class="table-wrap"><table><thead><tr><th>Exigência</th><th>Decisão e efeito esperado</th></tr></thead><tbody><tr><td>Não acrescentar nada que não esteja nas respostas; sem web e sem conhecimento próprio</td><td>Evitar afirmações órfãs. A quarta IA é relatora, não analista.</td></tr><tr><td>Não corrigir dados; sinalizar com [ALERTA]</td><td>Se a síntese corrigisse, eu perderia o rastro do erro original. O alerta mantém o dado e mostra a dúvida.</td></tr><tr><td>Etiqueta de origem [R1], [R2], [R3] em toda afirmação</td><td>É o que torna a auditoria de rastreabilidade possível: cada frase aponta para onde procurar.</td></tr><tr><td>Preservar o grau de certeza</td><td>Síntese tende a transformar &quot;pode&quot; em &quot;vai&quot;. Esta regra mira as afirmações distorcidas.</td></tr><tr><td>Reproduzir números exatamente, com a fonte atribuída</td><td>Evitar arredondamentos e médias que apagam divergências.</td></tr><tr><td>Divergência não se resolve escolhendo um lado</td><td>Síntese busca consenso; divergências são as primeiras a ser suprimidas, como alerta o enunciado.</td></tr><tr><td>Itens de uma só resposta não podem ser omitidos</td><td>Proteger o minoritário. Foi justamente uma única resposta (Manus) que trouxe o achado mais importante para a minha decisão.</td></tr><tr><td>Explicar o critério de agrupamento; na dúvida, manter separado</td><td>Juntar oportunidades parecidas é onde a síntese mais inventa equivalências.</td></tr></tbody></table></div>
+
+<p>A saída completa da quarta IA está no <a href="anexos.html#anexo-d">Anexo D</a>.</p>
+
+<div class="pager"><a href="prompt.html">← 2. O prompt-mestre</a><a href="auditoria.html">4. A síntese auditada →</a></div>
+</main>
+<button class="to-top" type="button" aria-label="Voltar ao topo">↑</button>
+<footer class="wrap foot">Universidade de Brasília · FACE · Departamento de Administração · ADM0150 Criação de Negócios · Profa. Marina Figueiredo Moreira · 2026.2</footer>
+</body>
+</html>

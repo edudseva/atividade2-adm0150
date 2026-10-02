@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. A síntese auditada · Cadeia de IAs · ADM0150</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="Estudo de caso da Atividade 2 de ADM0150 (UnB): prompt de detecção de oportunidades aplicado em três IAs, síntese por uma quarta IA e auditoria da cadeia.">
+<meta name="theme-color" content="#0b5c4a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b5c4a'/%3E%3Ccircle cx='9' cy='11' r='3' fill='%23fff'/%3E%3Ccircle cx='9' cy='21' r='3' fill='%23fff'/%3E%3Ccircle cx='23' cy='16' r='4' fill='%23fff'/%3E%3Cpath d='M12 11l7 4M12 21l7-4' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="index.html">Detecção de oportunidades com cadeia de IAs</a>
+    <span class="who">Eduardo Vieira Andrade · 202066473 · ADM0150 · 2026.2</span>
+    <button class="theme-toggle" type="button" aria-label="Mudar tema">☾</button>
+  </div>
+  <nav class="wrap nav" aria-label="Seções"><a href="index.html">1. Abertura</a><a href="prompt.html">2. O prompt-mestre</a><a href="protocolo.html">3. Protocolo de teste</a><a href="auditoria.html" aria-current="page">4. A síntese auditada</a><a href="conclusao.html">5. Conclusão</a><a href="anexos.html">Anexos</a></nav>
+</header>
+<main class="wrap" id="conteudo">
+<h1>4. A síntese auditada</h1>
+<p class="lead">A síntese da quarta IA tratada como objeto de investigação, e não como conclusão.</p>
+<div class="stats">
+<a class="stat" href="#s41"><span class="stat-k">Rastreabilidade · 13 afirmações</span>
+<span class="stat-row"><span class="tag ok">✓ 7 sustentadas</span><span class="tag warn">≈ 4 distorcidas</span><span class="tag bad">− 2 suprimidas</span></span>
+<span class="stat-n">0 órfãs</span><span class="stat-d">As distorções deixaram as respostas mais parecidas e mais confiantes do que eram.</span></a>
+<a class="stat" href="#s42"><span class="stat-k">Fonte primária · 6 checagens</span>
+<span class="stat-row"><span class="tag ok">✓ 4 confirmadas</span><span class="tag warn">≈ 1 parcial</span><span class="tag bad">✕ 1 não confirmada</span></span>
+<span class="stat-n">4 de 6</span><span class="stat-d">O erro relevante veio da ferramenta que operou sem web e passou pela síntese sem alerta.</span></a>
+<a class="stat" href="#s43"><span class="stat-k">Régua · oportunidade defendida</span>
+<span class="stat-n big">Apoio a fornecedores do setor público</span><span class="stat-d">Com duas condições: checar impedimentos funcionais e testar a disposição a pagar no MVP.</span></a>
+</div><div class="with-toc"><nav class="side-toc" aria-label="Nesta página"><p>Nesta página</p><a href="#s41">4.1 Rastreabilidade</a><a href="#s42">4.2 Fonte primária</a><a href="#s43">4.3 Aplicação da régua</a></nav><div class="toc-body"><p>Objeto da auditoria: a síntese produzida pela quarta IA (Claude) em 02/10/2026 às 09:10. A versão anexada traz duas correções de expressão feitas por mim depois da execução (identificação do Manus como R3 e registro de que o Gemini operou sem web), declaradas no cabeçalho do anexo. Comparei cada afirmação com as respostas R1 (ChatGPT), R2 (Gemini) e R3 (Manus) e, nos casos factuais, com a fonte primária.</p>
+<h2 id="s41">4.1 Auditoria de rastreabilidade</h2>
+<p>Classificação usada: <strong>sustentada</strong> (está na origem, sem distorção), <strong>distorcida</strong> (está na origem, mas mudou de sentido, número ou grau de certeza), <strong>órfã</strong> (não está em nenhuma das três) e <strong>suprimida</strong> (estava na origem, era relevante e sumiu).</p>
+<div class="table-wrap"><table class="num">
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Afirmação da síntese</th>
+<th>Onde aparece</th>
+<th>Fidelidade</th>
+<th>Comentário</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>As três aprovam uma oportunidade de apoio a pequenos fornecedores do setor público (grupo A)</td>
+<td>R1, R2, R3</td>
+<td><span class="tag ok">Sustentada</span></td>
+<td>Confere: LicitaOps DF (R1), Dispensas Eletrônicas (R2) e Monitoramento documental (R3). A síntese também registrou que R3 descartou uma variante parecida, o que evitou um consenso artificial.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Quem paga o serviço do grupo A é a própria empresa fornecedora</td>
+<td>R1, R2, R3</td>
+<td><span class="tag ok">Sustentada</span></td>
+<td>As três dizem isso; R3 é o único que afirma de forma explícita que o órgão público não paga.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>As três enquadram todas as aprovadas no modelo Empresarial</td>
+<td>R1, R2, R3</td>
+<td><span class="tag ok">Sustentada</span></td>
+<td>As nove oportunidades aprovadas são classificadas como Empresarial. A convergência é real, mas também pode ser efeito do prompt, que pediu o enquadramento.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Tabela de valores do grupo A (implantação, mensalidade, investimento, custo, equilíbrio)</td>
+<td>R1, R2, R3</td>
+<td><span class="tag ok">Sustentada</span></td>
+<td>Conferi os 15 valores um a um; todos batem com as respostas. A divergência de 4 a 14 clientes no ponto de equilíbrio foi mantida, sem média nem escolha de lado.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>"As três declaram que preços, investimentos e pontos de equilíbrio são premissas de modelagem"</td>
+<td>R1, R3 (integral); R2 (parcial)</td>
+<td><span class="tag warn">Distorcida</span></td>
+<td>R1 e R3 fazem essa declaração de forma geral. R2 marca os valores item a item como [HIPÓTESE], mas apresenta margens e pontos de equilíbrio como [INFERÊNCIA] e, no ranking, afirma sem ressalva que a oportunidade "opera com margem bruta de 85%". A síntese estendeu a cautela de R1 e R3 para R2, aumentando a confiabilidade aparente do Gemini.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>"As três propõem MVP manual ou sem software próprio"</td>
+<td>R1, R3</td>
+<td><span class="tag warn">Distorcida</span></td>
+<td>R2 descreve "monitoramento automatizado por IA", "plataforma digital própria" (grupo A) e "portal web próprio" (grupo B). A síntese uniformizou as três em torno da posição de R1 e R3. É um caso típico de síntese que busca consenso.</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Grupo D: "a economia não cobre o preço"</td>
+<td>R3</td>
+<td><span class="tag warn">Distorcida</span></td>
+<td>O original diz que "a economia ainda não cobre necessariamente o preço hipotético". Ao tirar "ainda", "necessariamente" e "hipotético", a síntese transformou uma dúvida em conclusão, violando a regra 4 do próprio prompt de síntese.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Risco do grupo A em R1: "o cliente achar que faz sozinho"</td>
+<td>R1</td>
+<td><span class="tag warn">Distorcida (leve)</span></td>
+<td>O sentido está correto, mas o original estava marcado como [HIPÓTESE] e a etiqueta caiu na síntese.</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Margens brutas de ~85%, ~88% e ~82% listadas como "presentes em apenas uma resposta" [R2]</td>
+<td>R2 e R1</td>
+<td><span class="tag bad">Suprimida</span></td>
+<td>R1 também estima margem: "margem bruta potencial superior a 70%" [HIPÓTESE] para o LicitaOps. A informação de R1 sumiu e, por isso, o item foi classificado erradamente como exclusivo de R2.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Seção 5, candidatas descartadas, com apenas a letra do item do checklist</td>
+<td>R1, R2, R3</td>
+<td><span class="tag bad">Suprimida</span></td>
+<td>O prompt de síntese pedia "o motivo". Os motivos sumiram, entre eles alguns relevantes para a minha decisão: R3 descartou eficiência energética porque "existe diagnóstico gratuito do Sebrae como substituto", e R1 descartou o apoio administrativo terceirizado por exigir "competir por preço e estrutura trabalhista".</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>R3 alerta para a situação funcional do fundador (Lei 8.112 e Lei 12.813); R1 e R2 não tratam do tema</td>
+<td>R3</td>
+<td><span class="tag ok">Sustentada</span></td>
+<td>Divergência preservada e atribuída corretamente. É o achado mais importante para a minha decisão (ver 4.3).</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Restaurantes: R1 e R2 aprovam, R3 descarta</td>
+<td>R1, R2, R3</td>
+<td><span class="tag ok">Sustentada</span></td>
+<td>A síntese manteve a divergência, em vez de apagar o descarte de R3.</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Limite 4, na versão gerada: "As três declaram acesso à web"</td>
+<td>R1, R2, R3</td>
+<td><span class="tag ok">Sustentada</span></td>
+<td>Era fiel ao que as respostas diziam. Mas o protocolo mostra que R2 operou sem acesso à web: a própria ferramenta admitiu depois que preencheu "sim" só para cumprir o formato. A síntese não tinha como saber, e o erro de declaração de R2 atravessou a cadeia intacto. Corrigi a redação no anexo com base no protocolo, e não nas respostas.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Órfãs.</strong> Procurei afirmações sem origem nas três respostas e não encontrei nenhuma no conteúdo da síntese original. Os nomes dos grupos (A a E) e os critérios de agrupamento são construções da síntese, declaradas como tais na seção 1. Registro uma ressalva: a frase do anexo de que R2 "operou sem acesso à web" não vem de nenhuma das três respostas, e sim do protocolo de teste. Foi uma correção minha, feita depois da execução e declarada no cabeçalho do anexo; não é produção da quarta IA.</p>
+<p><strong>Resultado:</strong> das 13 afirmações auditadas, 7 sustentadas, 4 distorcidas e 2 suprimidas, sem órfãs. As quatro distorções têm a mesma direção: a síntese deixou as respostas mais parecidas entre si e mais confiantes do que eram, principalmente a do Gemini.</p>
+<h2 id="s42">4.2 Verificação em fonte primária</h2>
+<div class="table-wrap"><table class="num">
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Afirmação</th>
+<th>Origem</th>
+<th>Fonte primária consultada</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>O limite de dispensa para compras e serviços em 2026 é R$ 65.492,11, pelo Decreto nº 12.807/2025</td>
+<td>R2</td>
+<td>BRASIL. Decreto nº 12.807, de 29 de dezembro de 2025</td>
+<td><strong>Confirmada.</strong> O decreto fixa R$ 65.492,11 para o art. 75, II, da Lei 14.133 (e R$ 130.984,20 para o inciso I). Porém, o link que R2 deu para o decreto é o da Lei 14.133, e o Gemini operou sem acesso à web: o dado está certo, mas a citação não leva à fonte.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>"A dispensa eletrônica via PNCP tornou-se 100% obrigatória"</td>
+<td>R2</td>
+<td>Lei 14.133/2021, art. 75, § 3º; BRASIL. IN SEGES/ME nº 67/2021, arts. 1º, 2º e 4º</td>
+<td><strong>Não confirmada como foi escrita.</strong> A lei diz que as contratações dos incisos I e II serão "preferencialmente precedidas de divulgação de aviso em sítio eletrônico oficial". A obrigação de usar a dispensa eletrônica vem da IN 67/2021 e vale para a administração federal; estados, DF e municípios só ficam obrigados quando executam recursos de transferências voluntárias da União (art. 2º). Para o GDF com recurso próprio, a afirmação não se sustenta. Isso afeta diretamente o "por que agora" da oportunidade escolhida por R2.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>O capítulo 1.5 da NR-1 (com fatores psicossociais) está em vigor desde 26/05/2026</td>
+<td>R3</td>
+<td>BRASIL. MTE. Portaria nº 765, de 15 de maio de 2025</td>
+<td><strong>Confirmada.</strong> O art. 1º prorroga "até 25 de maio de 2026" o início da vigência da nova redação do capítulo 1.5; logo, a vigência começa em 26/05/2026.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Em janeiro de 2026, 23% dos bares e restaurantes operaram com prejuízo, 41% com lucro e 36% em equilíbrio</td>
+<td>R1</td>
+<td>ABRASEL. Situação financeira de bares e restaurantes volta a piorar em janeiro, 5 mar. 2026</td>
+<td><strong>Confirmada.</strong> Os três percentuais batem. Ressalva: é pesquisa de associação setorial com amostra nacional, não dado do DF, e R1 cita em 2.2 outra notícia da Abrasel como fonte desses números.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>A PAS 2024 registrou 1.919.365 empresas, R$ 3,53 trilhões de receita e R$ 1,039 trilhão em serviços profissionais, administrativos e complementares</td>
+<td>R1</td>
+<td>IBGE. Pesquisa Anual de Serviços 2024, v. 26; Agência IBGE Notícias, 27 ago. 2026</td>
+<td><strong>Confirmada em ordem de grandeza.</strong> O IBGE divulga "1,9 milhão de empresas" e "R$ 3,5 trilhões"; serviços profissionais respondem por 29,4% da receita (cerca de R$ 1,03 trilhão). Não localizei nos trechos consultados os números exatos (1.919.365 e R$ 1,039 trilhão) nem as 455.730 empresas de serviços às famílias: esses ficam como não foi possível verificar.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Contrata+Brasil: 493 prefeitos manifestaram intenção de adesão</td>
+<td>R3</td>
+<td>BRASIL. MGI. Ministra da Gestão apresenta o Contrata+Brasil e quase 500 prefeitas e prefeitos já manifestaram intenção de aderir à plataforma, fev. 2025</td>
+<td><strong>Parcialmente confirmada.</strong> O título oficial confirma "quase 500"; o número exato 493 não foi possível verificar, porque o corpo da página não carregou. R3 já tinha deixado claro que isso mede intenção, não contrato.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Leitura do resultado.</strong> Das seis checagens, quatro confirmaram o dado, uma confirmou só parcialmente e uma não confirmou. O erro mais grave veio justamente da ferramenta que operou sem web (Gemini): o número do decreto estava certo, mas a regra que sustenta o argumento de "janela aberta" estava exagerada. E esse exagero passou pela síntese sem nenhum [ALERTA], porque a quarta IA não podia checar fonte.</p>
+<h3 id="referências-da-verificação">Referências da verificação</h3>
+<p>BRASIL. Decreto nº 12.807, de 29 de dezembro de 2025. Atualiza os valores estabelecidos na Lei nº 14.133, de 1º de abril de 2021. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12807.htm">https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12807.htm</a>. Acesso em: 2 out. 2026.</p>
+<p>BRASIL. Lei nº 14.133, de 1º de abril de 2021. Lei de Licitações e Contratos Administrativos. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm">https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm</a>. Acesso em: 2 out. 2026.</p>
+<p>BRASIL. Ministério da Economia. Secretaria de Gestão. Instrução Normativa SEGES/ME nº 67, de 8 de julho de 2021 (atualizada). Disponível em: <a href="https://www.gov.br/compras/pt-br/acesso-a-informacao/legislacao/instrucoes-normativas/instrucao-normativa-seges-me-no-67-de-8-de-julho-de-2021">https://www.gov.br/compras/pt-br/acesso-a-informacao/legislacao/instrucoes-normativas/instrucao-normativa-seges-me-no-67-de-8-de-julho-de-2021</a>. Acesso em: 2 out. 2026.</p>
+<p>BRASIL. Ministério do Trabalho e Emprego. Portaria MTE nº 765, de 15 de maio de 2025. Prorroga o início da vigência do capítulo 1.5 da NR-01. Disponível em: <a href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/inspecao-do-trabalho/seguranca-e-saude-no-trabalho/sst-portarias/2025/portaria-mte-no-765-prorroga-inicio-de-vigencia-cap-1-5-da-nr-01.pdf">https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/inspecao-do-trabalho/seguranca-e-saude-no-trabalho/sst-portarias/2025/portaria-mte-no-765-prorroga-inicio-de-vigencia-cap-1-5-da-nr-01.pdf</a>. Acesso em: 2 out. 2026.</p>
+<p>ABRASEL. Situação financeira de bares e restaurantes volta a piorar em janeiro. 5 mar. 2026. Disponível em: <a href="https://abrasel.com.br/noticias/noticias/situacao-financeira-de-bares-e-restaurantes-volta-a-piorar-em-janeiro/">https://abrasel.com.br/noticias/noticias/situacao-financeira-de-bares-e-restaurantes-volta-a-piorar-em-janeiro/</a>. Acesso em: 2 out. 2026.</p>
+<p>IBGE. Pesquisa Anual de Serviços 2024, v. 26. Rio de Janeiro: IBGE, 2026. Disponível em: <a href="https://biblioteca.ibge.gov.br/visualizacao/periodicos/150/pas_2024_v26.pdf">https://biblioteca.ibge.gov.br/visualizacao/periodicos/150/pas_2024_v26.pdf</a>. Acesso em: 2 out. 2026.</p>
+<p>IBGE. Setor de serviços emprega 15,9 milhões de pessoas e gera R$ 3,5 trilhões em receita em 2024. Agência IBGE Notícias, 27 ago. 2026. Disponível em: <a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47861-setor-de-servicos-emprega-15-9-milhoes-de-pessoas-e-gera-r-3-5-trilhoes-em-receita-em-2024">https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47861-setor-de-servicos-emprega-15-9-milhoes-de-pessoas-e-gera-r-3-5-trilhoes-em-receita-em-2024</a>. Acesso em: 2 out. 2026.</p>
+<p>BRASIL. Ministério da Gestão e da Inovação em Serviços Públicos. Ministra da Gestão apresenta o Contrata+Brasil e quase 500 prefeitas e prefeitos já manifestaram intenção de aderir à plataforma. Fev. 2025. Disponível em: <a href="https://www.gov.br/gestao/pt-br/assuntos/noticias/2025/fevereiro/ministra-da-gestao-apresenta-o-contrata-brasil-e-quase-500-prefeitas-e-prefeitos-ja-manifestaram-intencao-de-aderir-a-plataforma">https://www.gov.br/gestao/pt-br/assuntos/noticias/2025/fevereiro/ministra-da-gestao-apresenta-o-contrata-brasil-e-quase-500-prefeitas-e-prefeitos-ja-manifestaram-intencao-de-aderir-a-plataforma</a>. Acesso em: 2 out. 2026.</p>
+<h2 id="s43">4.3 Aplicação da régua</h2>
+<p>Escolhi as três oportunidades mais promissoras do conjunto: as duas que mais de uma IA aprovou (A e C) e a primeira colocada do Manus (E). Apliquei por minha conta o checklist final de Dornelas e a pergunta de modelo de negócio da Aula 6.</p>
+<h3 id="oportunidade-a--apoio-a-pequenos-fornecedores-do-setor-público-no-df">Oportunidade A · Apoio a pequenos fornecedores do setor público no DF</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Pergunta do checklist</th>
+<th>Minha resposta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Existe um problema?</td>
+<td>Sim. A habilitação exige documentos com validade, e a perda de prazo ou de certidão elimina a empresa.</td>
+</tr>
+<tr class="even">
+<td>Existe serviço que resolve?</td>
+<td>Sim, em parte: monitoramento de oportunidades, controle de validade de documentos e montagem de propostas. Não resolve a parte jurídica, que é privativa de advogado.</td>
+</tr>
+<tr class="odd">
+<td>Clientes identificáveis?</td>
+<td>Sim, e esta é a mais forte das três: o próprio PNCP mostra quem participa e quem vence. O cliente tem nome e CNPJ.</td>
+</tr>
+<tr class="even">
+<td>Marketing e vendas exequíveis?</td>
+<td>Não sei ainda. O PNCP e os cursos do Sebrae são gratuitos, e já existem assessorias. As IAs estimaram preços de R$ 600 a R$ 1.500 por mês sem nenhum preço observado.</td>
+</tr>
+<tr class="odd">
+<td>Janela aberta?</td>
+<td>Mais fraca do que as IAs disseram. A "obrigatoriedade total" da dispensa eletrônica não se confirmou para o GDF (4.2, item 2). O que mudou foi a centralização das informações no PNCP, que ajuda o fornecedor e também o concorrente.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Quem paga, por quê e a que custo:</strong> paga a empresa fornecedora, com o próprio caixa, para não perder venda por falha de documento e para não ter que contratar um funcionário só para isso. O custo para ela é a mensalidade; o meu custo é basicamente hora de trabalho, com investimento baixo (o menor valor estimado foi R$ 22 mil). A conta só fecha se o cliente enxergar a mensalidade como menor que o valor de uma venda perdida.</p>
+<h3 id="oportunidade-c--compras-estoque-e-margem-em-restaurantes">Oportunidade C · Compras, estoque e margem em restaurantes</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Pergunta do checklist</th>
+<th>Minha resposta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Existe um problema?</td>
+<td>Sim. É um problema operacional conhecido do setor, e o perfil do fundador inclui gerência de restaurante.</td>
+</tr>
+<tr class="even">
+<td>Existe serviço que resolve?</td>
+<td>Sim: ficha técnica, conferência de recebimento e controle de estoque.</td>
+</tr>
+<tr class="odd">
+<td>Clientes identificáveis?</td>
+<td>Sim, restaurantes independentes por região (Plano Piloto, Águas Claras).</td>
+</tr>
+<tr class="even">
+<td>Marketing e vendas exequíveis?</td>
+<td>Duvidoso. O dado que as IAs usaram como prova de dor (23% dos restaurantes com prejuízo em janeiro) é também prova de pouco caixa para pagar R$ 1.800 por mês. A mesma evidência sustenta a dor e enfraquece o pagamento.</td>
+</tr>
+<tr class="odd">
+<td>Janela aberta?</td>
+<td>Fraca. Pressão de custo em restaurante não é novidade de 2026; nenhuma das IAs apontou uma mudança recente que abra a janela. Foi exatamente por isso que o Manus descartou.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Quem paga, por quê e a que custo:</strong> o dono do restaurante, para recuperar margem. Ele só paga se a economia medida for maior que a mensalidade, e nenhuma das três mediu essa economia no DF.</p>
+<h3 id="oportunidade-e--sstesocial-para-pequenos-empregadores">Oportunidade E · SST/eSocial para pequenos empregadores</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Pergunta do checklist</th>
+<th>Minha resposta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Existe um problema?</td>
+<td>Sim. A NR-1 com riscos psicossociais entrou em vigor em 26/05/2026 (confirmado em 4.2).</td>
+</tr>
+<tr class="even">
+<td>Existe serviço que resolve?</td>
+<td>Sim, mas a parte técnica exige profissional habilitado em SST, que o perfil do fundador não inclui.</td>
+</tr>
+<tr class="odd">
+<td>Clientes identificáveis?</td>
+<td>Sim: empregadores pequenos com empregados CLT.</td>
+</tr>
+<tr class="even">
+<td>Marketing e vendas exequíveis?</td>
+<td>Não sei. Clínicas de medicina do trabalho e contadores já ocupam esse espaço e são o canal natural do cliente.</td>
+</tr>
+<tr class="odd">
+<td>Janela aberta?</td>
+<td>Sim. É a única das três com mudança regulatória recente e confirmada.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Quem paga, por quê e a que custo:</strong> o empregador, para cumprir a norma. Mas na conta do Manus o equilíbrio exige 24 clientes e a margem por cliente é de R$ 208,80, porque parte da receita vai para o parceiro técnico. Na pergunta "por que você e não o incumbente", o fundador perde: a clínica já tem o cliente e a habilitação.</p>
+<h3 id="qual-eu-defendo">Qual eu defendo</h3>
+<p>Defendo a <strong>oportunidade A</strong>, com recorte mais estreito do que qualquer IA propôs: monitoramento de oportunidades e controle documental para MEs e EPPs do DF que já fornecem ou tentam fornecer ao GDF e a órgãos federais, sem nenhuma atividade jurídica. É a única em que o fundador responde bem à quarta pergunta da triagem (por que você e não o incumbente), porque o perfil inclui experiência no processo do lado de quem compra, e em que o cliente é verificável numa base pública.</p>
+<p>Defendo com duas condições, que as próprias respostas me mostraram:</p>
+<ol type="1">
+<li><strong>Checar impedimentos funcionais antes de tudo.</strong> O Manus foi a única IA que lembrou que quem tem vínculo com a administração pública pode ter restrições para gerir empresa privada e conflito de interesse ao atender fornecedores do governo. Antes de abrir a empresa, o fundador precisa confirmar que não tem nenhum impedimento funcional desse tipo.</li>
+<li><strong>Tratar o item (d) do checklist como hipótese, não como resposta.</strong> Nenhuma das três IAs tinha preço observado. O MVP precisa medir uma coisa só: se pequenas empresas pagam, e renovam, uma mensalidade pelo serviço.</li>
+</ol>
+<p>A oportunidade C fica como segunda opção, porque o perfil tem o conhecimento operacional, mas ela não passa hoje no item da janela. A E eu descarto para este fundador: a janela é real, mas a vantagem é de quem tem habilitação em SST.</p>
+</div></div>
+<div class="pager"><a href="protocolo.html">← 3. Protocolo de teste</a><a href="conclusao.html">5. Conclusão →</a></div>
+</main>
+<button class="to-top" type="button" aria-label="Voltar ao topo">↑</button>
+<footer class="wrap foot">Universidade de Brasília · FACE · Departamento de Administração · ADM0150 Criação de Negócios · Profa. Marina Figueiredo Moreira · 2026.2</footer>
+</body>
+</html>
