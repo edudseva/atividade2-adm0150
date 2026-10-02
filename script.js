@@ -87,6 +87,7 @@
       all.textContent = open ? 'Fechar todos' : 'Abrir todos';
     });
   }
+
   // Celular: rótulos nas células para as tabelas virarem cartões
   document.querySelectorAll('.table-wrap').forEach(function (w) {
     var t = w.querySelector('table');
