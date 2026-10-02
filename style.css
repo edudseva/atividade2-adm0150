@@ -201,3 +201,31 @@ main{padding-top:40px}
   main{padding-top:28px}
 }
 table.num td:first-child,table.num th:first-child{min-width:0;width:36px;text-align:center;color:var(--muted)}
+
+/* ===== Celular: tabelas viram cartões e cabeçalho mais enxuto ===== */
+@media (max-width:640px){
+  html{scroll-padding-top:110px}
+  .brand{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+  .nav{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:24px}
+  .nav a{padding:8px 14px}
+  h2{font-size:1.3rem;margin-top:36px}
+  .card{padding:16px}
+  .id dl{grid-template-columns:1fr;gap:0}
+  .id dt{margin-top:10px}
+  .id dt:first-child{margin-top:0}
+  .table-wrap.stack{overflow:visible;border:0;background:none}
+  .table-wrap.stack table,.table-wrap.stack tbody,.table-wrap.stack tr,.table-wrap.stack td{display:block;width:100%}
+  .table-wrap.stack thead{display:none}
+  .table-wrap.stack tr{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px 14px;margin:0 0 12px}
+  .table-wrap.stack td{min-width:0;padding:8px 0;border-bottom:1px solid var(--line)}
+  .table-wrap.stack tr td:last-child{border-bottom:0}
+  .table-wrap.stack td[data-label]::before{content:attr(data-label);display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600;color:var(--muted);margin-bottom:2px}
+  .table-wrap.stack td:empty{display:none}
+  .table-wrap.stack table.num td:first-child{width:100%;text-align:left}
+  .annex-body{padding:8px 14px 14px}
+  details.annex>summary{padding:14px 44px 14px 14px}
+  .pager{flex-direction:column;gap:10px}
+  .pager a{padding:10px 0}
+  .to-top{right:12px;bottom:14px}
+}
+
