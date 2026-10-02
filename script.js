@@ -108,4 +108,12 @@
   if (cur && nav && nav.scrollWidth > nav.clientWidth) {
     nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
   }
+  // Menu: a roda do mouse rola o menu para o lado quando ele não cabe
+  if (nav) {
+    nav.addEventListener('wheel', function (e) {
+      if (nav.scrollWidth <= nav.clientWidth || Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+      nav.scrollLeft += e.deltaY;
+      e.preventDefault();
+    }, { passive: false });
+  }
 })();
