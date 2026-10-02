@@ -228,6 +228,7 @@ table.num td:first-child,table.num th:first-child{min-width:0;width:36px;text-al
   .pager a{padding:10px 0}
   .to-top{right:12px;bottom:14px}
 }
+
 /* ===== Navegação entre páginas (anterior / próxima) ===== */
 .pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:56px 0 40px;padding-top:24px;border-top:1px solid var(--line)}
 .pager a{display:flex;flex-direction:column;gap:4px;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);font:600 1rem/1.35 var(--sans);text-decoration:none;transition:border-color .2s ease,background .2s ease,transform .2s ease}
