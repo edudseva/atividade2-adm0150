@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. O projeto de negócio · Cadeia de IAs · ADM0150</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="Estudo de caso da Atividade 2 de ADM0150 (UnB): prompt de detecção de oportunidades aplicado em três IAs, síntese por uma quarta IA e auditoria da cadeia.">
+<meta name="theme-color" content="#0b5c4a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b5c4a'/%3E%3Ccircle cx='9' cy='11' r='3' fill='%23fff'/%3E%3Ccircle cx='9' cy='21' r='3' fill='%23fff'/%3E%3Ccircle cx='23' cy='16' r='4' fill='%23fff'/%3E%3Cpath d='M12 11l7 4M12 21l7-4' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="index.html">Detecção de oportunidades com cadeia de IAs</a>
+    <span class="who">Eduardo Vieira Andrade · 202066473 · ADM0150 · 2026.2</span>
+    <button class="theme-toggle" type="button" aria-label="Mudar tema">☾</button>
+  </div>
+  <nav class="wrap nav" aria-label="Seções"><a href="index.html">1. Abertura</a><a href="prompt.html">2. O prompt-mestre</a><a href="protocolo.html">3. Protocolo de teste</a><a href="auditoria.html">4. A síntese auditada</a><a href="conclusao.html">5. Conclusão</a><a href="projeto.html" aria-current="page">6. Projeto de negócio</a><a href="anexos.html">Anexos</a></nav>
+</header>
+<main class="wrap" id="conteudo">
+<h1>6. O projeto de negócio</h1>
+<p class="lead">Da oportunidade defendida a um negócio que dá para testar em seis meses: para quem, o que entrega, quanto cobra, quanto custa e o que faria eu desistir.</p>
+
+<div class="stats">
+<a class="stat" href="#s61"><span class="stat-k">Cliente</span>
+<span class="stat-n big">MEs e EPPs que vendem ou tentam vender ao governo no DF</span><span class="stat-d">Alimentação, limpeza, manutenção e serviços administrativos, sem ninguém dedicado à papelada.</span></a>
+<a class="stat" href="#s64"><span class="stat-k">Preço em teste · hipótese</span>
+<span class="stat-n">R$ 600 a R$ 1.200</span><span class="stat-d">Por mês. Equilíbrio entre 14 e 7 clientes, na conta de custos do Manus.</span></a>
+<a class="stat" href="#s66"><span class="stat-k">Pergunta do MVP</span>
+<span class="stat-n big">Pagam e renovam?</span><span class="stat-d">Seis meses de operação manual, sem software próprio, com regra de parada definida antes de começar.</span></a>
+</div><div class="with-toc"><nav class="side-toc" aria-label="Nesta página"><p>Nesta página</p><a href="#s61">6.1 Cliente e problema</a><a href="#s62">6.2 O que o serviço entrega</a><a href="#s63">6.3 Modelo de negócio</a><a href="#s64">6.4 Números do cenário</a><a href="#s65">6.5 Concorrência</a><a href="#s66">6.6 Plano do MVP</a><a href="#s67">6.7 Riscos</a><a href="#s68">6.8 Antes de abrir</a></nav><div class="toc-body">
+<p>Esta seção transforma a oportunidade A em um projeto. Uso o material das três respostas e da síntese, mas as escolhas são minhas. Tudo o que envolve preço, custo e demanda continua sendo <strong>hipótese</strong>: nenhuma das IAs tinha preço observado, e eu também não tenho. O projeto foi desenhado justamente para trocar essas hipóteses por dados no menor tempo possível.</p>
+
+<h2 id="s61">6.1 Cliente e problema</h2>
+<p><strong>Quem é o cliente.</strong> O dono ou gestor de uma ME ou EPP do DF ou da RIDE que já fornece, ou tenta fornecer, ao GDF e a órgãos federais em serviços de alimentação, limpeza, manutenção ou apoio administrativo, e que não tem um funcionário só para cuidar de documentos e prazos. Esse recorte é o do Manus, que achei o mais concreto dos três.</p>
+<p><strong>Por que esse cliente é bom para começar.</strong> Ele é verificável. O PNCP mostra quem participa e quem ganha, com CNPJ, porte e objeto. Dá para montar a lista de prospecção a partir de uma base pública, em vez de tentar adivinhar quem tem o problema.</p>
+<p><strong>Qual é o problema.</strong> Vender ao governo exige uma rotina que a pequena empresa faz aos trancos: achar as contratações que servem para ela entre muitas publicações, manter certidões dentro da validade, montar a documentação de habilitação para cada processo e não perder prazo. Quando uma certidão vence ou um documento falta, a empresa pode ser inabilitada, e a lei não permite, em regra, juntar depois o que faltou.</p>
+<p><strong>O que eu ainda não sei.</strong> Quanto isso custa para o cliente. Nenhuma resposta conseguiu medir a dor no DF: R1 e R3 registraram que não foi possível verificar, e o valor de R$ 30 mil a R$ 150 mil por ano do Gemini é inferência sem fonte. Medir isso é parte do MVP (6.6).</p>
+
+<h2 id="s62">6.2 O que o serviço entrega</h2>
+<p>O serviço é operacional, não jurídico. A ideia é tirar do dono da empresa o trabalho repetitivo de procurar, conferir e organizar, deixando com ele a decisão e o envio.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Entra no serviço</th><th>Fica de fora</th></tr></thead>
+<tbody>
+<tr><td>Monitoramento semanal de contratações no PNCP filtradas pelo perfil do cliente (atividade, região, valor)</td><td>Parecer jurídico, impugnação de edital e recurso administrativo, que são atividade de advogado</td></tr>
+<tr><td>Calendário de validade de certidões e documentos, com aviso antes de vencer</td><td>Representar o cliente em sessão pública ou enviar proposta em nome dele</td></tr>
+<tr><td>Checklist de habilitação para cada processo que o cliente decidir disputar</td><td>Promessa de vitória ou cobrança por resultado nas primeiras versões</td></tr>
+<tr><td>Pasta de habilitação organizada e atualizada, pronta para uso</td><td>Software próprio, que só faria sentido depois de provar que o cliente paga</td></tr>
+<tr><td>Relatório mensal curto: o que apareceu, o que foi disputado, o que venceu e o que está para vencer</td><td>Atendimento a quem quer só "aprender licitação", que já tem curso gratuito do Sebrae</td></tr>
+</tbody></table></div>
+<p>O limite jurídico não é detalhe. O Manus foi o único que separou explicitamente o serviço de qualquer atividade privativa de advogado (Lei 8.906/1994), e eu mantenho essa separação no contrato e na oferta. Quando aparecer uma demanda jurídica, o caminho é indicar um advogado.</p>
+
+<h2 id="s63">6.3 Modelo de negócio</h2>
+<p>Usando a definição da Aula 6: quem paga, por quê e a que custo.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Pergunta</th><th>Resposta do projeto</th></tr></thead>
+<tbody>
+<tr><td>Quem paga</td><td>A própria empresa fornecedora, com caixa próprio. O órgão público não paga nada, e isso é importante: o serviço não depende de contrato com o governo.</td></tr>
+<tr><td>Por que paga</td><td>Para não perder venda por erro de documento ou prazo e para não ter que contratar alguém só para isso. A mensalidade precisa parecer menor que o valor de uma única venda perdida.</td></tr>
+<tr><td>Como cobra</td><td>Taxa de implantação (levantamento de documentos e montagem da pasta) mais mensalidade recorrente. Na fase de teste, sem taxa de sucesso, para medir a disposição a pagar pelo serviço em si.</td></tr>
+<tr><td>Modelo da web</td><td>Empresarial: serviço vendido a empresas. Site, PNCP e planilhas são ferramentas, não fonte de receita.</td></tr>
+<tr><td>Como chega ao cliente</td><td>Prospecção direta a partir da lista do PNCP, indicação de contadores que atendem fornecedores e associações empresariais. Sem anúncio pago no início.</td></tr>
+<tr><td>Principal custo</td><td>Hora de trabalho. O investimento é baixo porque o MVP é manual.</td></tr>
+</tbody></table></div>
+
+<h2 id="s64">6.4 Números do cenário</h2>
+<p>As três IAs chegaram a valores bem diferentes para a mesma oportunidade:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Item</th><th>R1 ChatGPT</th><th>R2 Gemini</th><th>R3 Manus</th></tr></thead>
+<tbody>
+<tr><td>Implantação</td><td>R$ 2.500</td><td>não informada</td><td>R$ 1.000</td></tr>
+<tr><td>Mensalidade</td><td>R$ 1.200</td><td>R$ 1.500 + 3% de sucesso</td><td>R$ 600</td></tr>
+<tr><td>Investimento</td><td>R$ 28.000</td><td>R$ 22.000</td><td>R$ 65.000 (com 6 meses de giro)</td></tr>
+<tr><td>Custo fixo mensal</td><td>R$ 6.500</td><td>R$ 6.500</td><td>R$ 7.500</td></tr>
+<tr><td>Ponto de equilíbrio</td><td>7 clientes</td><td>4 clientes</td><td>14 clientes</td></tr>
+</tbody></table></div>
+<p><strong>Qual cenário eu adoto.</strong> O do Manus, por ser o mais conservador e o único que detalha cada custo e inclui seis meses de capital de giro. O investimento de R$ 65 mil cabe no teto de R$ 100 mil do recorte. Os custos fixos são R$ 7.500 por mês: retirada do fundador (R$ 4.000), apoio de freelancer (R$ 1.500), contabilidade e seguro (R$ 700), ferramentas (R$ 500) e vendas e deslocamento (R$ 800). A provisão de imposto é de 8% da receita.</p>
+<p><strong>O que muda com o preço.</strong> Mantendo esses custos, refiz a conta do equilíbrio para quatro preços de mensalidade. É aritmética sobre premissas, não previsão:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Mensalidade</th><th>Sobra por cliente, depois de 8% de imposto</th><th>Clientes para pagar R$ 7.500 de custo fixo</th></tr></thead>
+<tbody>
+<tr><td>R$ 600</td><td>R$ 552</td><td>14</td></tr>
+<tr><td>R$ 900</td><td>R$ 828</td><td>10</td></tr>
+<tr><td>R$ 1.200</td><td>R$ 1.104</td><td>7</td></tr>
+<tr><td>R$ 1.500</td><td>R$ 1.380</td><td>6</td></tr>
+</tbody></table></div>
+<p>A tabela mostra por que o preço é a variável mais importante do projeto. Entre R$ 600 e R$ 1.200, o número de clientes necessário cai pela metade. Por isso o MVP testa dois preços em vez de assumir um (6.6). A taxa de implantação fica fora do equilíbrio: ajuda o caixa, mas não se repete.</p>
+
+<h2 id="s65">6.5 Concorrência e diferencial</h2>
+<p>O cliente já tem alternativas, e algumas são gratuitas:</p>
+<ul>
+<li><strong>Fazer sozinho.</strong> O PNCP é aberto e não pede cadastro. Esse é o concorrente mais forte, e o risco que o ChatGPT apontou: o cliente achar que dá conta.</li>
+<li><strong>Curso gratuito do Sebrae.</strong> Ensina o processo, mas não faz o trabalho pela empresa.</li>
+<li><strong>Assessorias de licitação.</strong> Já existem; o Manus citou Perfect Licitações e Desiderati. Preço e participação delas no DF não foram verificados.</li>
+<li><strong>O contador ou um funcionário interno.</strong> O Gemini estimou um funcionário a R$ 4.500 por mês, sem fonte.</li>
+</ul>
+<p><strong>Onde está o diferencial, com honestidade.</strong> As três IAs discordaram sobre a barreira de entrada (R1 alta, R3 baixa), e eu fico mais perto do Manus: alerta e checklist se copiam em poucos meses. O que é mais difícil de copiar é a experiência do lado de quem compra, ou seja, saber como o processo é conduzido e onde o fornecedor costuma tropeçar, somada ao foco local e ao relacionamento. É uma vantagem real, mas pequena. O projeto não depende de ela ser grande; depende de o cliente pagar e renovar.</p>
+
+<h2 id="s66">6.6 Plano do MVP em seis meses</h2>
+<p>Operação manual, com planilha, agenda e as próprias bases públicas. Nada de software antes de alguém pagar.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Mês</th><th>O que faço</th><th>O que meço</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Extraio do PNCP as MEs e EPPs do DF que disputaram contratações nos setores do recorte. Converso com 20 a 30 delas e com alguns contadores.</td><td>Quantas perderam processo por documento ou prazo; quanto tempo gastam por mês com isso; quanto pagam hoje, se pagam.</td></tr>
+<tr><td>2</td><td>Fecho os primeiros clientes. Metade recebe a proposta a R$ 600 e metade a R$ 1.200, com o mesmo escopo.</td><td>Taxa de aceite em cada preço; objeções mais comuns; custo de aquisição por canal.</td></tr>
+<tr><td>3 e 4</td><td>Entrego o serviço completo e ajusto a rotina. Sigo prospectando.</td><td>Horas gastas por cliente por mês; documentos vencidos evitados; processos disputados.</td></tr>
+<tr><td>5 e 6</td><td>Chega a hora da renovação dos primeiros clientes. Paro de mudar a oferta.</td><td>Renovação; clientes pagantes ativos; se a conta de 6.4 fecha com as horas reais.</td></tr>
+</tbody></table></div>
+<p><strong>Regras de decisão, definidas antes de começar.</strong> São regras do experimento, não previsões:</p>
+<ul>
+<li><strong>Continuo</strong> se, no fim do sexto mês, houver pelo menos 7 clientes pagando e pelo menos 80% de renovação, e se as horas por cliente couberem na conta. Sete é o equilíbrio no preço de R$ 1.200; 80% é a meta de renovação que o Gemini propôs.</li>
+<li><strong>Ajusto</strong> se os clientes pagam e renovam, mas só no preço de R$ 600. Aí preciso de 14 clientes, e a pergunta passa a ser se consigo atender esse volume com o fundador e um freelancer.</li>
+<li><strong>Paro</strong> se, no fim do sexto mês, houver menos de 4 clientes pagantes, ou se a maioria não renovar depois do primeiro ciclo. Nesse caso o PNCP gratuito e o "faço sozinho" ganharam, e o capital que sobra fica preservado.</li>
+</ul>
+
+<h2 id="s67">6.7 Riscos e como respondo a cada um</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Risco</th><th>De onde veio</th><th>Resposta no projeto</th></tr></thead>
+<tbody>
+<tr><td>O cliente achar que faz sozinho</td><td>R1</td><td>Vender pelo custo de uma venda perdida, não pela busca. A busca é grátis; a pasta em dia e o prazo cumprido não são.</td></tr>
+<tr><td>O cliente desistir se não ganhar nada nos primeiros meses</td><td>R2</td><td>Deixar claro desde o início que o serviço não promete vitória. Medir o que o serviço controla: documentos em dia e processos disputados.</td></tr>
+<tr><td>A janela ser menor que o esperado</td><td>Auditoria 4.2</td><td>Não usar a "obrigatoriedade total" da dispensa eletrônica como argumento de venda, porque ela não vale para o GDF com recurso próprio.</td></tr>
+<tr><td>Concorrente copiar a oferta</td><td>R1 e R3</td><td>Competir por foco local, relacionamento e qualidade de atendimento, e não por exclusividade de método.</td></tr>
+<tr><td>Dados sensíveis dos clientes</td><td>R3</td><td>Contrato com cláusula de LGPD, acesso restrito aos documentos e nenhum dado guardado além do necessário.</td></tr>
+<tr><td>Conflito de interesse do fundador</td><td>R3</td><td>Condição eliminatória, tratada antes de abrir a empresa (6.8).</td></tr>
+</tbody></table></div>
+
+<h2 id="s68">6.8 O que precisa estar resolvido antes de abrir</h2>
+<p>Três condições funcionam como portão. Se alguma não for atendida, o projeto não começa:</p>
+<ol class="steps">
+<li><strong>Impedimento funcional.</strong> Quem tem ou teve vínculo com a administração pública precisa confirmar, pelas regras do próprio vínculo, que pode administrar empresa privada e atender fornecedores do governo sem conflito de interesse. O Manus citou a Lei 8.112/1990 e a Lei 12.813/2013; a regra aplicável depende do tipo de vínculo, e a resposta deve vir por escrito, de quem tem competência para responder.</li>
+<li><strong>Escopo jurídico fechado no contrato.</strong> O contrato com o cliente diz o que o serviço não faz (6.2).</li>
+<li><strong>Abertura com contador.</strong> Definir enquadramento e tributação reais. A provisão de 8% usada em 6.4 é premissa do Manus, não cálculo tributário.</li>
+</ol>
+<p>Com isso resolvido, o calendário do recorte fica assim: checagens no fim de 2026, MVP no primeiro semestre de 2027 e decisão de continuar, ajustar ou parar no segundo semestre de 2027. Se continuar, 2028 é o ano de chegar ao limite do recorte, com o fundador e até dois colaboradores.</p>
+</div></div>
+
+<div class="pager"><a href="conclusao.html">← 5. Conclusão</a><a href="anexos.html">Anexos →</a></div>
+</main>
+<button class="to-top" type="button" aria-label="Voltar ao topo">↑</button>
+<footer class="wrap foot">Universidade de Brasília · FACE · Departamento de Administração · ADM0150 Criação de Negócios · Profa. Marina Figueiredo Moreira · 2026.2</footer>
+</body>
+</html>
